@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int multiplo(int a, int b)
+
+int main(){
+	int x, y;
+	cout<<"ingrese su numero:"<<endl;
+	cin>>x>>y;
+	cout<<multiplo(x, y);
+	getch();
+	
+	return 0;
+}
+int multiplo(int a, int b){
+	int e,h;
+	if(a>b)
+		h=a%b;
+	else
+		h=b%a;
+	if(h=0)
+		e=1;
+	else
+		e=0;
+}

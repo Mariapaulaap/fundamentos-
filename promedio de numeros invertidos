@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float promedio_invertidos(int n);
+void main()
+{
+	int n;
+	float p;
+	cout<<"Ingrese un N limite que sea par"<<endl;
+	cin>>n;
+	if(n%2==0){
+		p=promedio_invertidos(n);
+	cout<<"El promedio es:"<<p<<endl;
+	getch();
+}
+else {
+	cout<<"El limite tiene que ser un número par:"<<endl;
+	getch();}
+}
+float promedio_invertidos(int n){
+	int m, p=2, r=2, s=0, t=0;
+	float prom, i=0;
+	while(p<=n){
+		while(r>0){
+		m=r%10;
+		r=r/10;
+		t=(t*10)+m;
+	}
+	i=i++;
+	p=p+2;
+	r=p;
+	s=s+t;
+	t=0;
+}
+prom=s/i;
+return prom;
+}

@@ -1,0 +1,136 @@
+EJERCICIO N°1
+#include "stdafx.h"
+#include <iostream>
+#include  "conio.h"
+
+int multiplo(int x, int y);
+using namespace std;
+void main() {
+	int x, y;
+	bool flag;
+	cout<<"Ingrese dos numeros naturales: ";
+	cin>>x>>y;
+	flag=multiplo(x, y);
+	if (flag=true)
+		cout<<"Es multiplo";
+	else
+		cout<<"No es multiplo";
+	getch();
+}
+int multiplo(int x, int y){
+	bool flag;
+	if (x>y){
+		if (x%y==0)
+			flag=true;
+		else
+			flag=false;
+	}
+	else 
+		if (y%x==0)
+			flag=true;
+		else
+			flag=false;
+return flag;
+}
+
+EJERCICIO N°2
+#include "stdafx.h"
+#include <iostream>
+#include  "conio.h"
+
+using namespace std;
+
+void main(){
+
+	float estancia, distancia, precio, billete, v;
+	cout<<"ingrese el numero de dias de su estancia:"<<endl;
+	cin>> estancia;
+	cout<<"ingrese la distancia:"<<endl;
+	cin>> distancia;
+	cout<<"ingrese el precio por km:"<<endl;
+	cin>> precio;
+	v=precio*distancia ;
+	if(estancia>7 && distancia>700)
+		billete=(v-(v*0.3));
+	else
+		billete=v;
+	cout<<"el precio total es:"<<billete<<endl;
+	getch();
+}
+
+
+EJERCICIO N°3
+#include "stdafx.h"
+#include <iostream>
+#include  "conio.h"
+#include "math.h"
+ using namespace std;
+ float serie(float x, float n);
+ int main(){
+	 float x, n, s;
+	 cout<<"ingrese un valor para x"<<endl;
+	 cin>>x;
+	 cout<<"ingrese hasta que numero se repetira:"<<endl;
+	 cin>>n;
+	 s=serie(x, n);
+	 cout<<"la suma de la serie es:"<<s<<endl;
+	 getch();
+	 return 0;
+ }
+float serie(float x, float n){
+	float s, e, m, num, ser;
+	int c,f,l,p;
+	s=0;
+	e=0;
+	c=1;
+	f=1;
+	l=1;
+	p=1;
+	while (c<=0){
+		e=e+1;
+		m=pow(x,e);
+		f=f+1;
+		while (1<=f){
+			p=p*1;
+			f=f+1;
+		}
+	}
+	if(c%2==0)
+		num=(m/p);
+	else 
+		num=(m/p)*(-1);
+	s=s+num;
+	c=c+1;
+	ser=(3,15+1);
+	return ser;
+}
+
+EJERCICIO N°4
+#include "stdafx.h"
+#include <iostream>
+#include  "conio.h"
+
+using namespace std;
+
+int num(int x);
+
+void main(){
+	int x, n;
+	cout<<"ingrese el numero"<<endl;
+	cin>>x;
+	n=num(x);
+	cout<<"la suma es:"<<n<<endl;
+	getch();
+}
+int num(int x){
+	int m,s;
+	s=0;
+	while (x!=0){
+		m=x%10;
+		if (m%2!=0)
+			s=s+m; 
+			x=int(x/10);
+	}
+	return s;
+}
+
